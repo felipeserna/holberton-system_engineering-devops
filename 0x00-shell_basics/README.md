@@ -5,3 +5,4 @@
 #ls -l Display current directory contents in a long format
 #ls -la .. List all files even hidden ones
 #ls -lna long format, user and group IDs and hidden files (starting with .)
+#mkdir creates a directory
