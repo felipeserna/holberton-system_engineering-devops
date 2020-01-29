@@ -9,3 +9,4 @@
 #mv move or rename files and directories
 #rm remove files and directories
 #rm -r remove directory
+#cd - change the working directory to the previous one
