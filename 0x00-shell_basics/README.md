@@ -6,3 +6,4 @@
 #ls -la .. List all files even hidden ones
 #ls -lna long format, user and group IDs and hidden files (starting with .)
 #mkdir creates a directory
+#mv move or rename files and directories
