@@ -8,3 +8,4 @@
 #mkdir creates a directory
 #mv move or rename files and directories
 #rm remove files and directories
+#rm -r remove directory
