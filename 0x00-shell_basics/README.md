@@ -7,3 +7,4 @@
 #ls -lna long format, user and group IDs and hidden files (starting with .)
 #mkdir creates a directory
 #mv move or rename files and directories
+#rm remove files and directories
