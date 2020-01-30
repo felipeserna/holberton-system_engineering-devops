@@ -11,3 +11,4 @@
 #rm -r remove directory
 #cd - change the working directory to the previous one
 #ls -la . .. /boot listing multiple directories
+#file file type
