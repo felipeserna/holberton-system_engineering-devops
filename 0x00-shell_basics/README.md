@@ -13,3 +13,4 @@
 #ls -la . .. /boot listing multiple directories
 #file file type
 #ln -s symbolic link
+#cp copy files
