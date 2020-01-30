@@ -14,3 +14,4 @@
 #file file type
 #ln -s symbolic link
 #cp copy files
+#mv moves files
