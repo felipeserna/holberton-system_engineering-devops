@@ -15,3 +15,4 @@
 #ln -s symbolic link
 #cp copy files
 #mv moves files
+#rm delete files
