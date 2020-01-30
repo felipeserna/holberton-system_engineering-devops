@@ -17,3 +17,4 @@
 #mv moves files
 #rm delete files
 #mkdir -p many directories
+#ls -pam
