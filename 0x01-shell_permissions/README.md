@@ -8,3 +8,4 @@
 #7-everybody add permissions without commas
 #8-James_Bond set permissions
 #9-John_Doe sets the mode
+#10-mirror_permissions sets the mode of the file hello the same as olleh's mode
