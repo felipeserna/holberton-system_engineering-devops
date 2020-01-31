@@ -7,3 +7,4 @@
 #6-multiple_permissions To the file hello
 #7-everybody add permissions without commas
 #8-James_Bond set permissions
+#9-John_Doe sets the mode
