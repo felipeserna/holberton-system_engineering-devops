@@ -6,3 +6,4 @@
 #5-execute adds execute permission to the owner of a file
 #6-multiple_permissions To the file hello
 #7-everybody add permissions without commas
+#8-James_Bond set permissions
