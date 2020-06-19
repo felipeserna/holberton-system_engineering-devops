@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Bash script that displays Holberton School 10 times. Use the until loop.
 c=1
-until [[ $c -le 10 ]]
+until [ $c -gt 10 ]
 do
     echo "Holberton School"
-    c=$((c+1))
+    ((c++))
 done
