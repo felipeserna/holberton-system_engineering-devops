@@ -5,7 +5,7 @@
 c=1
 while [[ $c -le 10 ]]
 do
-    if [[ $c -eq 9 ]]
+    if [[ $c -eq 10 ]]
     then
 	echo "Hi"
 	c=$((c+1))
