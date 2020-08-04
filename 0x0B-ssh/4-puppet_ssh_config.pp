@@ -5,13 +5,11 @@
 # * Your SSH client configuration must be configured to refuse
 # to authenticate using a password
 file_line { 'puppet_configuration':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/holberton',
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/holberton',
 }
 
 file_line { 'puppet_configuration':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication no',
+  path => '/etc/ssh/ssh_config',
+  line => 'PasswordAuthentication no',
 }
