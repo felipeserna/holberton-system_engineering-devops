@@ -6,12 +6,12 @@
 # to authenticate using a password
 file_line { 'puppet_configuration':
   ensure => 'present',
-  path   => '~/.ssh/config',
+  path   => '/etc/ssh/ssh_config',
   line   =>  'IdentityFile ~/.ssh/holberton',
   }
 
 file_line { 'puppet_configuration':
   ensure => 'present',
-  path   => '~/.ssh/config',
+  path   => '/etc/ssh/ssh_config',
   line   => 'PasswordAuthentication no',
   }
