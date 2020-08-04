@@ -7,11 +7,11 @@
 file_line { 'puppet_configuration':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
-  line   =>  'IdentityFile ~/.ssh/holberton',
-  }
+  line   => 'IdentityFile ~/.ssh/holberton',
+}
 
 file_line { 'puppet_configuration':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
   line   => 'PasswordAuthentication no',
-  }
+}
