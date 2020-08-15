@@ -13,9 +13,10 @@ exec { 'command_1':
   command =>  "sudo chmod '0777' /var/www/html/index.nginx-debian.html",
   }
 
-exec { 'command_3':
-  command => "sudo sed -i '/listen 80 default_server/a add_header X-Served-By ${hostname};' /etc/nginx/sites-available/default2";
+exec { 'command_2':
+  command => 'sudo sed -i \'/listen 80 default_server/a "add_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default;',
+  }
 
-exec { 'command_4':
-  'sudo service nginx restart',
+exec { 'command_3':
+  command => 'sudo service nginx restart',
   }
