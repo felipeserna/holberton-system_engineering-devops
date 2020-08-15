@@ -11,10 +11,11 @@ package { 'nginx':
 
 file_line { 'command_1':
   path  => '/etc/nginx/sites-available/default',
-  line  => "add_header X-Served-By \$HOSTNAME;"
-  after => '/listen 80 default_server/a'
+  line  => "add_header X-Served-By \$HOSTNAME;",
+  after => '/listen 80 default_server/a',
   }
 
-exec { 'command_2':
-  command => 'sudo service nginx restart',
+service { 'nginx':
+    ensure  => running,
+    require => Package['nginx'],
   }
