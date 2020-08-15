@@ -9,8 +9,9 @@ package { 'nginx':
   ensure => 'installed',
   }
 
-exec { 'command_1':
-  command => 'sudo sed -i \'/listen 80 default_server/a "add_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default;',
+file_line { 'command_1':
+  path => '/etc/nginx/sites-available/default;',
+  line => '/listen 80 default_server/a "add_header X-Served-By \$HOSTNAME;"'
   }
 
 exec { 'command_2':
