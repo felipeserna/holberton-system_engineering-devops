@@ -2,11 +2,11 @@
 # * name must be X-Served-By
 # * value must be the hostname of the server Nginx is running on
 exec { 'apt-get update':
-  command => '/usr/bin/apt-get update'
+  command => '/usr/bin/apt-get update',
   }
 
 package { 'nginx':
-  ensure => 'installed'
+  ensure => 'installed',
   }
 
 exec { 'command_1':
