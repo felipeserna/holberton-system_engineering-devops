@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
-# Show subdomain record type and ip it points to
+# Configure your domain zone so that the subdomain www points to your
+# load-balancer IP (lb-01). Also add other subdomains, and write a Bash
+# script that will display information about subdomains.
 
-
-if [ $# -eq 2 ]
+if [ $# == 2 ]
 then
-    subdomain="$2.$1"
-    ip=$(dig "$subdomain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')
-    record_type=$(dig "$subdomain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')
-    echo "The subdomain $2 is a $record_type record and points to $ip"
-elif [ $# -eq 1 ]
+    sub_domain="$2.$1"
+    destination=$(dig "$sub_domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')
+    record_type=$(dig "$sub_domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')
+    echo "The sub_domain $2 is a $record_type record and points to $destination"
+elif [ $# == 1 ]
 then
-    for subdomain in 'www' 'lb-01' 'web-01' 'web-02'
+    for sub_domain in 'www' 'lb-01' 'web-01' 'web-02'
     do
-        domain="$subdomain.$1"
-        ip=$(dig "$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')
+        domain="$sub_domain.$1"
+        destination=$(dig "$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')
         record_type=$(dig "$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')
-        echo "The subdomain $subdomain is a $record_type record and points to $ip"
+        echo "The subdomain $sub_domain is a $record_type record and points to $destination"
     done
 fi
