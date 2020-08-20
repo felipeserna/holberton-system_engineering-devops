@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# nginx must be running as nginx user
+# nginx must be listening on all active IPs on port 8080
+sudo apt-get install nginx
+service nginx restart
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+service nginx restart
