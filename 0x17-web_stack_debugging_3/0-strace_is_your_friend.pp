@@ -1,4 +1,5 @@
 # Fixes 500 error from wordpress config file
-exec {
-    '/usr/bin/env sed -i "s/phpp/php/g" /var/www/html/wp-settings.php':
+file { '/var/www/html/wp-includes/class-up-locale.phpp':
+ensure => present,
+source => '/var/www/html/wp-includes/class-wp-locale.php',
 }
