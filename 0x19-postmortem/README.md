@@ -1,6 +1,6 @@
 # Postmortem   
 ## Issue Summary   
-On August 15, 2020, from 1:00 PM to 2:00 PM PT, users could not access Amazon Web Services web server, so they lose a lot of money because their businesses relied on that company. Fortunately, Amazon has many data centers all over the world, so the businesses that were affected were those hosted in a server located in North Virginia, USA. The root cause was that the NGINX web server was not listening on port 80 due to some experiments with port 8080.
+On August 15, 2020, from 1:00 PM to 2:00 PM PT, around 60% of world users could not access Amazon Web Services web server, so they lose a lot of money because their businesses relied on that company. Amazon has many data centers all over the world, and the businesses that were affected were those hosted in a server located in North Virginia, USA. The root cause was that the NGINX web server was not listening on port 80 due to some experiments with port 8080.
 ## Timeline   
 - At 1:00 PM: A user from Japan tried to access his business web page and he received a 404 error.
 - At 1:03 PM: The same user alerted Amazon Web Services of that issue because they did not have a monitoring tool.
