@@ -25,8 +25,8 @@ server {
 		 proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
 	}
 
-	location /api/ {
-		 proxy_pass http://127.0.0.1:5002/api/;
+	location ~ /api/([0-9a-zA-Z/]+) {
+		 proxy_pass http://127.0.0.1:5002;
 	}
 	
 	add_header X-Served-By gc-1509-web-01-1596432435;
